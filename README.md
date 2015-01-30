@@ -11,12 +11,12 @@ webhooks, automatic deployment key management
 and other Bitrise features which require you to have
 administrator access to the repository you add on Bitrise.
 
-After you fork this repository you can just
+After you fork this repository you can just:
 
-1. go to Bitrise
-2. click on the [Add new App button](http://www.bitrise.io/apps/add),
-3. choose GitHub
-4. and select your fork of this repository from the list of your repositories.
+1. Go to Bitrise
+2. Click on the [Add new App button](http://www.bitrise.io/apps/add)
+3. Choose GitHub
+4. Select your fork of this repository from the list of your repositories.
 
 Everything else will be handled automatically and you can
 start playing with Bitrise in less than a minute.

@@ -1,2 +1,6 @@
-ios-simple-objc/ios-simple-objc.xcodeproj/project.xcworkspace/xcuserdata
-ios-simple-objc/ios-simple-objc.xcodeproj/xcuserdata
+# Mac OS X
+*.DS_Store
+
+# Xcode
+xcuserdata/
+.bitrise*

@@ -52,6 +52,16 @@
                ReferencedContainer = "container:ios-simple-objc.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BAA117920E37288007435FA"
+               BuildableName = "ios-simple-objcUITests.xctest"
+               BlueprintName = "ios-simple-objcUITests"
+               ReferencedContainer = "container:ios-simple-objc.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

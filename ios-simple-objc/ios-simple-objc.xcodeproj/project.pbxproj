@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BAA117D20E37288007435FA /* ios_simple_objcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA117C20E37288007435FA /* ios_simple_objcUITests.swift */; };
 		BA3CBE7B19F7A93800CED4D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3CBE7A19F7A93800CED4D5 /* main.m */; };
 		BA3CBE7E19F7A93900CED4D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3CBE7D19F7A93900CED4D5 /* AppDelegate.m */; };
 		BA3CBE8119F7A93900CED4D5 /* ios_simple_objc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA3CBE7F19F7A93900CED4D5 /* ios_simple_objc.xcdatamodeld */; };
@@ -19,13 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1BAA117F20E37288007435FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA3CBE6D19F7A93800CED4D5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BA3CBE7419F7A93800CED4D5;
-			remoteInfo = "ios-simple-objc";
-		};
 		BA3CBE9219F7A93900CED4D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BA3CBE6D19F7A93800CED4D5 /* Project object */;
@@ -36,9 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BAA117A20E37288007435FA /* ios-simple-objcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-simple-objcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BAA117C20E37288007435FA /* ios_simple_objcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_simple_objcUITests.swift; sourceTree = "<group>"; };
-		1BAA117E20E37288007435FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3CBE7519F7A93800CED4D5 /* ios-simple-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-simple-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3CBE7919F7A93800CED4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3CBE7A19F7A93800CED4D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,13 +45,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BAA117720E37288007435FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BA3CBE7219F7A93800CED4D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,21 +62,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BAA117B20E37288007435FA /* ios-simple-objcUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1BAA117C20E37288007435FA /* ios_simple_objcUITests.swift */,
-				1BAA117E20E37288007435FA /* Info.plist */,
-			);
-			path = "ios-simple-objcUITests";
-			sourceTree = "<group>";
-		};
 		BA3CBE6C19F7A93800CED4D5 = {
 			isa = PBXGroup;
 			children = (
 				BA3CBE7719F7A93800CED4D5 /* ios-simple-objc */,
 				BA3CBE9419F7A93900CED4D5 /* ios-simple-objcTests */,
-				1BAA117B20E37288007435FA /* ios-simple-objcUITests */,
 				BA3CBE7619F7A93800CED4D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,7 +76,6 @@
 			children = (
 				BA3CBE7519F7A93800CED4D5 /* ios-simple-objc.app */,
 				BA3CBE9119F7A93900CED4D5 /* ios-simple-objcTests.xctest */,
-				1BAA117A20E37288007435FA /* ios-simple-objcUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,24 +125,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BAA117920E37288007435FA /* ios-simple-objcUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1BAA118320E37288007435FA /* Build configuration list for PBXNativeTarget "ios-simple-objcUITests" */;
-			buildPhases = (
-				1BAA117620E37288007435FA /* Sources */,
-				1BAA117720E37288007435FA /* Frameworks */,
-				1BAA117820E37288007435FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1BAA118020E37288007435FA /* PBXTargetDependency */,
-			);
-			name = "ios-simple-objcUITests";
-			productName = "ios-simple-objcUITests";
-			productReference = 1BAA117A20E37288007435FA /* ios-simple-objcUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		BA3CBE7419F7A93800CED4D5 /* ios-simple-objc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA3CBE9B19F7A93900CED4D5 /* Build configuration list for PBXNativeTarget "ios-simple-objc" */;
@@ -213,16 +166,9 @@
 		BA3CBE6D19F7A93800CED4D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Bitrise;
 				TargetAttributes = {
-					1BAA117920E37288007435FA = {
-						CreatedOnToolsVersion = 9.4.1;
-						DevelopmentTeam = 72SA8V3WYL;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BA3CBE7419F7A93800CED4D5;
-					};
 					BA3CBE7419F7A93800CED4D5 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 72SA8V3WYL;
@@ -249,19 +195,11 @@
 			targets = (
 				BA3CBE7419F7A93800CED4D5 /* ios-simple-objc */,
 				BA3CBE9019F7A93900CED4D5 /* ios-simple-objcTests */,
-				1BAA117920E37288007435FA /* ios-simple-objcUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1BAA117820E37288007435FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BA3CBE7319F7A93800CED4D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,14 +220,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1BAA117620E37288007435FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BAA117D20E37288007435FA /* ios_simple_objcUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BA3CBE7119F7A93800CED4D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,11 +242,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1BAA118020E37288007435FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BA3CBE7419F7A93800CED4D5 /* ios-simple-objc */;
-			targetProxy = 1BAA117F20E37288007435FA /* PBXContainerItemProxy */;
-		};
 		BA3CBE9319F7A93900CED4D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BA3CBE7419F7A93800CED4D5 /* ios-simple-objc */;
@@ -344,76 +269,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1BAA118120E37288007435FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "ios-simple-objcUITests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "bitfall.ios-simple-objcUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ios-simple-objc";
-			};
-			name = Debug;
-		};
-		1BAA118220E37288007435FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "ios-simple-objcUITests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "bitfall.ios-simple-objcUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ios-simple-objc";
-			};
-			name = Release;
-		};
 		BA3CBE9919F7A93900CED4D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,15 +425,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BAA118320E37288007435FA /* Build configuration list for PBXNativeTarget "ios-simple-objcUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1BAA118120E37288007435FA /* Debug */,
-				1BAA118220E37288007435FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BA3CBE7019F7A93800CED4D5 /* Build configuration list for PBXProject "ios-simple-objc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

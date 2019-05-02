@@ -185,6 +185,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -363,10 +364,10 @@
 				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				INFOPLIST_FILE = "ios-simple-objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitrise.ios-simple-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "BitriseBot-Wildcard";
+				PROVISIONING_PROFILE_SPECIFIER = BitFliesTest;
 			};
 			name = Debug;
 		};
@@ -379,10 +380,10 @@
 				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				INFOPLIST_FILE = "ios-simple-objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitrise.ios-simple-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "BitriseBot-Wildcard";
+				PROVISIONING_PROFILE_SPECIFIER = BitFliesTest;
 			};
 			name = Release;
 		};

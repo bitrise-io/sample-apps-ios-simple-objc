@@ -10,7 +10,7 @@ trigger_map:
 workflows:
   successful-workflow:
     title: Successful Workflow
-    description: "<script>alert("hey")</script>"
+    description: "<script>alert('hey')</script>"
     steps:
     - script@1.1.2:
         inputs:

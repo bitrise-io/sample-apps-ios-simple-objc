@@ -13,8 +13,10 @@ workflows:
     description: "<script>alert('hey')</script>"
     steps:
     - script@1.1.2:
+        description: "<script>alert('step hey')</script>"
         inputs:
         - content: |-
             #!/bin/bash
 
             echo "Success!"
+          description: "<script>alert('input hey')</script>"

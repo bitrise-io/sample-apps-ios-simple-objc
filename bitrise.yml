@@ -19,4 +19,5 @@ workflows:
             #!/bin/bash
 
             echo "Success!"
-          description: "<script>alert('input hey')</script>"
+          opts:
+            description: "<script>alert('input hey')</script>"

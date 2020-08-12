@@ -18,6 +18,6 @@ workflows:
         - content: |-
             #!/bin/bash
 
-            echo "Success!"
+            echo "Success! ~!*()'"
           opts:
             description: "<script>alert('input hey')</script>"

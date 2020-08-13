@@ -3,21 +3,15 @@ format_version: 1.0.0
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 trigger_map:
-- pattern: "*"
-  is_pull_request_allowed: true
-  workflow: successful-workflow
+- workflow: "successful-workflow"
+  push_branch: "*"
 
 workflows:
   successful-workflow:
-    title: Successful Workflow
-    description: "<script>alert('hey')</script>"
     steps:
     - script@1.1.2:
-        description: "<script>alert('step hey')</script>"
         inputs:
         - content: |-
             #!/bin/bash
 
             echo "Success! ~!*()'"
-          opts:
-            description: "<script>alert('input hey')</script>"

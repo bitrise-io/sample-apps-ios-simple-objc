@@ -1,17 +1,12 @@
----
-format_version: 1.0.0
-default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
+format_version: "1.0.0"
+default_step_lib_source: "https://github.com/bitrise-io/bitrise-steplib.git"
 trigger_map:
-- workflow: "successful-workflow"
-  push_branch: "*"
-
+  - workflow: "successful-workflow"
+    push_branch: "*"
 workflows:
   successful-workflow:
     steps:
-    - script@1.1.2:
-        inputs:
-        - content: |-
-            #!/bin/bash
-
-            echo "Success! ~!*()'"
+      - script@1.1.2:
+          inputs:
+            - content: "#!/bin/bash\n\necho \"Success! ~!*()'\""
+          title: "Scripty"

@@ -8,5 +8,5 @@ workflows:
     steps:
       - script@1.1.2:
           inputs:
-            - content: "#!/bin/bash\n\necho \"Success! ~!*()'\""
-          title: "Scripty"
+            - content: "#!/bin/bash\n\necho \"Success! And btw dis is on the master branch. ~!*()'\""
+          title: "Script"

@@ -9,4 +9,4 @@ workflows:
       - script@1.1.2:
           inputs:
             - content: "#!/bin/bash\n\necho \"Success! And btw dis is on the master branch. ~!*()'\""
-          title: "Scripte"
+          title: "Script"

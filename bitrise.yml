@@ -3,13 +3,13 @@ default_step_lib_source: "https://github.com/bitrise-io/bitrise-steplib.git"
 trigger_map:
   - workflow: "successful-workflow"
     push_branch: "*"
-work flows:
+workflows:
   # ------------
   # CI workflows
   # ------------
   successful-workflow:
     steps:
-- script@1.1.2:
+      - script@1.1.2:
           inputs:
             - content: "#!/bin/bash\n\necho \"Success! And btw dis is on the master branch. ~!*()'\""
           title: "Script"

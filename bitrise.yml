@@ -1,15 +1,56 @@
-format_version: "8"
-default_step_lib_source: "https://github.com/bitrise-io/bitrise-steplib.git"
+---
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
 trigger_map:
-  - workflow: "successful-workflow"
-    push_branch: "*"
+- push_branch: "*"
+  workflow: primary
+- pull_request_source_branch: "*"
+  workflow: primary
 workflows:
-  # ------------
-  # CI workflows
-  # ------------
-  successful-workflow:
+  deploy:
     steps:
-      - script@1.1.2:
-          inputs:
-            - content: "#!/bin/bash\n\necho \"Success! And btw dis is on the master branch. ~!*()'\""
-          title: "Script"
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4: {}
+    - cache-pull@2: {}
+    - script@1:
+        title: Do anything with Script step
+    - certificate-and-profile-installer@1: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - scheme: "$BITRISE_SCHEME"
+    - xcode-archive@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - scheme: "$BITRISE_SCHEME"
+        - export_method: "$BITRISE_EXPORT_METHOD"
+    - deploy-to-bitrise-io@1: {}
+    - cache-push@2: {}
+  primary:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4: {}
+    - cache-pull@2: {}
+    - script@1:
+        title: Do anything with Script step
+    - certificate-and-profile-installer@1: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - scheme: "$BITRISE_SCHEME"
+    - deploy-to-bitrise-io@1: {}
+    - cache-push@2: {}
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: ios-simple-objc/ios-simple-objc.xcodeproj
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: ios-simple-objc
+  - opts:
+      is_expand: false
+    BITRISE_EXPORT_METHOD: development

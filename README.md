@@ -13,7 +13,7 @@ administrator access to the repository you add on Bitrise.
 
 After you fork this repository you can just:
 
-1. Go to Bitrise
+1. Go to Bitrisee
 2. Click on the [Add new App button](http://www.bitrise.io/apps/add)
 3. Choose GitHub
 4. Select your fork of this repository from the list of your repositories.

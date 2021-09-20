@@ -31,7 +31,7 @@ class ios_simple_objcUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let bitriseIosSimpleObjcElement = XCUIApplication().otherElements.containing(.staticText, identifier:"Bitrise ios-simple-objc").element
+        let bitriseIosSimpleObjcElement = XCUIApplication().staticTexts["Bitrise ios-simple-objc"]
         bitriseIosSimpleObjcElement.swipeLeft()
         bitriseIosSimpleObjcElement.swipeRight()
         bitriseIosSimpleObjcElement.swipeLeft()

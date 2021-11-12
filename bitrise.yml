@@ -39,9 +39,3 @@ workflows:
         run_if: .IsCI
         inputs:
         - is_compress: 'false'
-    meta:
-      bitrise.io:
-        stack: osx-xcode-13.2.x
-meta:
-  bitrise.io:
-    stack: osx-vs4mac-stable

@@ -80,7 +80,6 @@
 				1C99510B0CE1F41C208CD72A /* Pods-ios-simple-objcTests.debug.xcconfig */,
 				0A2EAA572BF51B67CB441B15 /* Pods-ios-simple-objcTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -472,7 +471,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-simple-objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.ios-simple-objc.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "BitriseBot-Wildcard";
@@ -491,7 +490,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-simple-objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.ios-simple-objc.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "BitriseBot-Wildcard";

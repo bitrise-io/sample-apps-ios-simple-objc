@@ -175,6 +175,7 @@
 					};
 					BA3CBE9019F7A93900CED4D5 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 72SA8V3WYL;
 						TestTargetID = BA3CBE7419F7A93800CED4D5;
 					};
 				};
@@ -184,6 +185,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -372,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -391,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

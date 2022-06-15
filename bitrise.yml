@@ -67,6 +67,8 @@ workflows:
         - BITRISE_DSYM_PATH:
           opts:
             title: The created .dSYM.zip file's path
+    - deploy-to-bitrise-io@1.3: {}
     meta:
       bitrise.io:
         stack: osx-xcode-13.13.x
+        machine_type_id: g2.8core

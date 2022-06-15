@@ -11,11 +11,6 @@ app:
     opts:
       is_expand: false
 
-trigger_map:
-- pattern: "*"
-  is_pull_request_allowed: true
-  workflow: primary
-
 workflows:
   primary:
     steps:

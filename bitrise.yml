@@ -69,4 +69,4 @@ workflows:
             title: The created .dSYM.zip file's path
     meta:
       bitrise.io:
-        stack: osx-xcode-13.3.x
+        stack: osx-xcode-13.13.x

@@ -30,6 +30,3 @@ and the project contains only one *shared scheme*.
 
 The purpose of this is to make it quick and easy to validate and
 to experiment with this repository on Bitrise.
-
-# Test
-test

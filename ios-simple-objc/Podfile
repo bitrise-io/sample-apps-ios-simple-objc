@@ -7,7 +7,7 @@ target 'ios-simple-objc' do
 
   # Pods for ios-simple-objc
 
-  pod 'Alamofire', '~> 5.0.0-rc.3'
+  pod 'Alamofire', '~> 5.6.4'
 
   target 'ios-simple-objcTests' do
     inherit! :search_paths

@@ -45,17 +45,20 @@ import CoreServices
 open class MultipartFormData {
     // MARK: - Helper Types
 
-    struct EncodingCharacters {
+    enum EncodingCharacters {
         static let crlf = "\r\n"
     }
 
-    struct BoundaryGenerator {
+    enum BoundaryGenerator {
         enum BoundaryType {
             case initial, encapsulated, final
         }
 
         static func randomBoundary() -> String {
-            return String(format: "alamofire.boundary.%08x%08x", arc4random(), arc4random())
+            let first = UInt32.random(in: UInt32.min...UInt32.max)
+            let second = UInt32.random(in: UInt32.min...UInt32.max)
+
+            return String(format: "alamofire.boundary.%08x%08x", first, second)
         }
 
         static func boundaryData(forBoundaryType boundaryType: BoundaryType, boundary: String) -> Data {
@@ -97,7 +100,7 @@ open class MultipartFormData {
     open lazy var contentType: String = "multipart/form-data; boundary=\(self.boundary)"
 
     /// The content length of all body parts used to generate the `multipart/form-data` not including the boundaries.
-    public var contentLength: UInt64 { return bodyParts.reduce(0) { $0 + $1.bodyContentLength } }
+    public var contentLength: UInt64 { bodyParts.reduce(0) { $0 + $1.bodyContentLength } }
 
     /// The boundary used to separate the body parts in the encoded form data.
     public let boundary: String
@@ -210,6 +213,7 @@ open class MultipartFormData {
         //              Check 2 - is file URL reachable?
         //============================================================
 
+        #if !(os(Linux) || os(Windows))
         do {
             let isReachable = try fileURL.checkPromisedItemIsReachable()
             guard isReachable else {
@@ -220,6 +224,7 @@ open class MultipartFormData {
             setBodyPartError(withReason: .bodyPartFileNotReachableWithError(atURL: fileURL, error: error))
             return
         }
+        #endif
 
         //============================================================
         //            Check 3 - is file URL a directory?
@@ -416,6 +421,12 @@ open class MultipartFormData {
             }
         }
 
+        guard UInt64(encoded.count) == bodyPart.bodyContentLength else {
+            let error = AFError.UnexpectedInputStreamLength(bytesExpected: bodyPart.bodyContentLength,
+                                                            bytesRead: UInt64(encoded.count))
+            throw AFError.multipartEncodingFailed(reason: .inputStreamReadFailed(error: error))
+        }
+
         return encoded
     }
 
@@ -497,18 +508,6 @@ open class MultipartFormData {
         }
     }
 
-    // MARK: - Private - Mime Type
-
-    private func mimeType(forPathExtension pathExtension: String) -> String {
-        if
-            let id = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as CFString, nil)?.takeRetainedValue(),
-            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue() {
-            return contentType as String
-        }
-
-        return "application/octet-stream"
-    }
-
     // MARK: - Private - Content Headers
 
     private func contentHeaders(withName name: String, fileName: String? = nil, mimeType: String? = nil) -> HTTPHeaders {
@@ -524,15 +523,15 @@ open class MultipartFormData {
     // MARK: - Private - Boundary Encoding
 
     private func initialBoundaryData() -> Data {
-        return BoundaryGenerator.boundaryData(forBoundaryType: .initial, boundary: boundary)
+        BoundaryGenerator.boundaryData(forBoundaryType: .initial, boundary: boundary)
     }
 
     private func encapsulatedBoundaryData() -> Data {
-        return BoundaryGenerator.boundaryData(forBoundaryType: .encapsulated, boundary: boundary)
+        BoundaryGenerator.boundaryData(forBoundaryType: .encapsulated, boundary: boundary)
     }
 
     private func finalBoundaryData() -> Data {
-        return BoundaryGenerator.boundaryData(forBoundaryType: .final, boundary: boundary)
+        BoundaryGenerator.boundaryData(forBoundaryType: .final, boundary: boundary)
     }
 
     // MARK: - Private - Errors
@@ -542,3 +541,44 @@ open class MultipartFormData {
         bodyPartError = AFError.multipartEncodingFailed(reason: reason)
     }
 }
+
+#if canImport(UniformTypeIdentifiers)
+import UniformTypeIdentifiers
+
+extension MultipartFormData {
+    // MARK: - Private - Mime Type
+
+    private func mimeType(forPathExtension pathExtension: String) -> String {
+        if #available(iOS 14, macOS 11, tvOS 14, watchOS 7, *) {
+            return UTType(filenameExtension: pathExtension)?.preferredMIMEType ?? "application/octet-stream"
+        } else {
+            if
+                let id = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as CFString, nil)?.takeRetainedValue(),
+                let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue() {
+                return contentType as String
+            }
+
+            return "application/octet-stream"
+        }
+    }
+}
+
+#else
+
+extension MultipartFormData {
+    // MARK: - Private - Mime Type
+
+    private func mimeType(forPathExtension pathExtension: String) -> String {
+        #if !(os(Linux) || os(Windows))
+        if
+            let id = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as CFString, nil)?.takeRetainedValue(),
+            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue() {
+            return contentType as String
+        }
+        #endif
+
+        return "application/octet-stream"
+    }
+}
+
+#endif

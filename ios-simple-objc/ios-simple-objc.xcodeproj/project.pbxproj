@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA3CBE7519F7A93800CED4D5 /* ios-simple-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-simple-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3CBE7519F7A93800CED4D5 /* iosSimpleCustomArtifactName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSimpleCustomArtifactName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3CBE7919F7A93800CED4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3CBE7A19F7A93800CED4D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA3CBE7C19F7A93800CED4D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		BA3CBE7619F7A93800CED4D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA3CBE7519F7A93800CED4D5 /* ios-simple-objc.app */,
+				BA3CBE7519F7A93800CED4D5 /* iosSimpleCustomArtifactName.app */,
 				BA3CBE9119F7A93900CED4D5 /* ios-simple-objcTests.xctest */,
 			);
 			name = Products;
@@ -139,7 +139,7 @@
 			);
 			name = "ios-simple-objc";
 			productName = "ios-simple-objc";
-			productReference = BA3CBE7519F7A93800CED4D5 /* ios-simple-objc.app */;
+			productReference = BA3CBE7519F7A93800CED4D5 /* iosSimpleCustomArtifactName.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA3CBE9019F7A93900CED4D5 /* ios-simple-objcTests */ = {
@@ -366,7 +366,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.ios-simple-objc-new-certs";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iosSimpleCustomArtifactName;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "BitriseBot-Wildcard";
 			};
@@ -383,7 +383,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bitrise.ios-simple-objc-new-certs";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iosSimpleCustomArtifactName;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "BitriseBot-Wildcard";
 			};

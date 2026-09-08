@@ -4,3 +4,5 @@
 # Xcode
 xcuserdata/
 .bitrise*
+
+Gemfile.lock

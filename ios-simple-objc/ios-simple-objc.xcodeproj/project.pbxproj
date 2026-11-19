@@ -11,6 +11,7 @@
 		BA3CBE7E19F7A93900CED4D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3CBE7D19F7A93900CED4D5 /* AppDelegate.m */; };
 		BA3CBE8119F7A93900CED4D5 /* ios_simple_objc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA3CBE7F19F7A93900CED4D5 /* ios_simple_objc.xcdatamodeld */; };
 		BA3CBE8419F7A93900CED4D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3CBE8319F7A93900CED4D5 /* ViewController.m */; };
+		5A3E0C012EB1A00000C0FFEE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E0C032EB1A00000C0FFEE /* SceneDelegate.m */; };
 		BA3CBE8719F7A93900CED4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3CBE8519F7A93900CED4D5 /* Main.storyboard */; };
 		BA3CBE8919F7A93900CED4D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3CBE8819F7A93900CED4D5 /* Images.xcassets */; };
 		BA3CBE8C19F7A93900CED4D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3CBE8A19F7A93900CED4D5 /* LaunchScreen.xib */; };
@@ -36,6 +37,8 @@
 		BA3CBE8019F7A93900CED4D5 /* ios_simple_objc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_simple_objc.xcdatamodel; sourceTree = "<group>"; };
 		BA3CBE8219F7A93900CED4D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BA3CBE8319F7A93900CED4D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A3E0C022EB1A00000C0FFEE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		5A3E0C032EB1A00000C0FFEE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		BA3CBE8619F7A93900CED4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA3CBE8819F7A93900CED4D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA3CBE8B19F7A93900CED4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 			children = (
 				BA3CBE7C19F7A93800CED4D5 /* AppDelegate.h */,
 				BA3CBE7D19F7A93900CED4D5 /* AppDelegate.m */,
+				5A3E0C022EB1A00000C0FFEE /* SceneDelegate.h */,
+				5A3E0C032EB1A00000C0FFEE /* SceneDelegate.m */,
 				BA3CBE8219F7A93900CED4D5 /* ViewController.h */,
 				BA3CBE8319F7A93900CED4D5 /* ViewController.m */,
 				BA3CBE8519F7A93900CED4D5 /* Main.storyboard */,
@@ -166,16 +171,16 @@
 		BA3CBE6D19F7A93800CED4D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Bitrise;
 				TargetAttributes = {
 					BA3CBE7419F7A93800CED4D5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72SA8V3WYL;
+						DevelopmentTeam = DT2C2FZ7U2;
 					};
 					BA3CBE9019F7A93900CED4D5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 72SA8V3WYL;
+						DevelopmentTeam = DT2C2FZ7U2;
 						TestTargetID = BA3CBE7419F7A93800CED4D5;
 					};
 				};
@@ -226,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3CBE7E19F7A93900CED4D5 /* AppDelegate.m in Sources */,
+				5A3E0C012EB1A00000C0FFEE /* SceneDelegate.m in Sources */,
 				BA3CBE7B19F7A93800CED4D5 /* main.m in Sources */,
 				BA3CBE8419F7A93900CED4D5 /* ViewController.m in Sources */,
 				BA3CBE8119F7A93900CED4D5 /* ios_simple_objc.xcdatamodeld in Sources */,
@@ -283,15 +289,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -307,6 +317,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SAMPLE_BUNDLE_ID_BASE = "io.bitrise.samples.simple-objc";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -325,15 +336,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -342,6 +356,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				SAMPLE_BUNDLE_ID_BASE = "io.bitrise.samples.simple-objc";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -352,7 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
+				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				INFOPLIST_FILE = "ios-simple-objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -364,7 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
+				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				INFOPLIST_FILE = "ios-simple-objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,7 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
+				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -388,6 +403,7 @@
 				INFOPLIST_FILE = "ios-simple-objcTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SAMPLE_BUNDLE_ID_BASE).tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-simple-objc.app/ios-simple-objc";
 			};
@@ -397,7 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
+				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -405,6 +421,7 @@
 				INFOPLIST_FILE = "ios-simple-objcTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SAMPLE_BUNDLE_ID_BASE).tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-simple-objc.app/ios-simple-objc";
 			};
